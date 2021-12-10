@@ -1,7 +1,7 @@
 # nginx-kubernets-ingress
 
 ## Overview
-nginx-kubernets-ingress is a [nginx](https://www.nginx.org/) deploy application for Kubernets and docker using kind and ingress nginx as a reverse proxy and load balancer.
+nginx-kubernets-ingress is a [nginx](https://www.nginx.org/) deploy application for Kubernets and docker using kind and [ingress nginx](https://github.com/kubernetes/ingress-nginx/) as a reverse proxy and load balancer.
 
 ## Requirements
 
