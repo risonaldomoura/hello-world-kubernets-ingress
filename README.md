@@ -5,9 +5,9 @@ nginx-kubernets-ingress is a [nginx](https://www.nginx.org/) deploy application 
 
 ## Requirements
 
-1. Kind
-2. kubernets
-3. Docker
+- Kind
+- kubernets
+- Docker
 
 ## How to build
 
