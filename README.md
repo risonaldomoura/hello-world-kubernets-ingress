@@ -11,9 +11,9 @@ nginx-kubernets-ingress is a [nginx](https://www.nginx.org/) deploy application 
 
 ## How to build
 
-1. Execute create_cluster.sh running command  `./create_cluster.sh`
-2. Execute deployment.yaml running command  `kubectl apply -f deployment.yaml`
-3. Execute ingress.yaml running command  `kubectl apply -f ingress.yaml`
+1. Execute [`create_cluster.sh`](create_cluster.sh) create_cluster.sh running  `./create_cluster.sh`
+2. Execute [`deployment.yaml`](deployment.yaml) running  `kubectl apply -f deployment.yaml`
+3. Execute [`ingress.yaml`](ingress.yaml) running  `kubectl apply -f ingress.yaml`
 
 
 ## License
