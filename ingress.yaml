@@ -1,0 +1,71 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: beagle-app
+  labels:
+    app: beagle
+spec:
+  containers:
+  - name: beagle-app
+    image: hashicorp/http-echo:0.2.3
+    args:
+    - "-text=Beagle Application - System Driven UI!"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: beagle-service
+spec:
+  selector:
+    app: beagle
+  ports:
+  # Default port used by the image
+  - port: 5678
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: horusec-app
+  labels:
+    app: horusec
+spec:
+  containers:
+  - name: horusec-app
+    image: hashicorp/http-echo:0.2.3
+    args:
+    - "-text=Horusec Application - Development by security!"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: horusec-service
+spec:
+  selector:
+    app: horusec
+  ports:
+  # Default port used by the image
+  - port: 5678
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/beagle"
+        backend:
+          service:
+            name: beagle-service
+            port:
+              number: 5678
+      - pathType: Prefix
+        path: "/horusec"
+        backend:
+          service:
+            name: horusec-service
+            port:
+              number: 5678
+---
