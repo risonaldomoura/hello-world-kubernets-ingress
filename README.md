@@ -1,20 +1,19 @@
-# nginx-kubernets-ingress
+# nginx-kubernetes-ingress
 
 ## Overview
-nginx-kubernets-ingress is a [nginx](https://www.nginx.org/) deploy application for Kubernets and docker using kind and [ingress nginx](https://github.com/kubernetes/ingress-nginx/) as a reverse proxy and load balancer.
+nginx-kubernetes-ingress is a [nginx](https://www.nginx.org/) deploy application for Kubernetes and docker using kind and [ingress nginx](https://github.com/kubernetes/ingress-nginx/) as a reverse proxy and load balancer.
 
 ## Requirements
 
 - Kind
-- kubernets
+- kubernetes
 - Docker
 
 ## How to build
 
-1. Execute [`create_cluster.sh`](create_cluster.sh) running  `./create_cluster.sh`
-2. Execute [`deploy.yaml`](deploy.yaml) running  `kubectl apply -f deployment.yaml`
-3. Execute [`ingress.yaml`](ingress.yaml) running  `kubectl apply -f ingress.yaml`
-
+1. Create a [cluster](https://kubernetes.io/pt-br/docs/concepts/overview/components/) using [`create_cluster.sh`](create_cluster.sh) running  `./create_cluster.sh`
+2. Create a [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) using [`deployment.yaml`](deployment.yaml) running  `kubectl create -f deployment.yaml`
+3. Create a [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) using [`ingress.yaml`](ingress.yaml) running  `kubectl create -f ingress.yaml`
 
 ## License
 
