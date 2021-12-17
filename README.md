@@ -13,7 +13,7 @@ nginx-kubernetes-ingress is a [nginx](https://www.nginx.org/) deploy application
 
 1. Create a [cluster](https://kubernetes.io/pt-br/docs/concepts/overview/components/) using [`create_cluster.sh`](create_cluster.sh) running  `./create_cluster.sh`
 2. Create a [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) using [`deployment.yaml`](deployment.yaml) running  `kubectl create -f deployment.yaml`
-3. Create a [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) using [`ingress.yaml`](ingress.yaml) running  `kubectl create -f ingress.yaml`
+3. Create an [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) using [`ingress.yaml`](ingress.yaml) running  `kubectl create -f ingress.yaml`
 4. Be happy :)
 
 ## License
